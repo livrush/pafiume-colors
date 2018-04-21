@@ -114,8 +114,21 @@ describe('Pafiume Colors', function(){
         expect(pafiumeColors().scheme().length).to.equal(1);
       });
 
-      it('should work when non-number is passed as argument', function () {
-        expect(pafiumeColors().scheme().length).to.equal(1);
+      it('should work with non-numbers', function () {
+        expect(pafiumeColors().scheme('').length).to.equal(1);
+        expect(pafiumeColors().scheme(true).length).to.equal(1);
+        expect(pafiumeColors().scheme([]).length).to.equal(1);
+        expect(pafiumeColors().scheme({}).length).to.equal(1);
+        expect(pafiumeColors().scheme(undefined).length).to.equal(1);
+        expect(pafiumeColors().scheme(null).length).to.equal(1);
+      });
+
+      it('should work with negative numbers', function () {
+        expect(pafiumeColors().scheme(-1).length).to.equal(1);
+      });
+
+      it('should work with numbers larger than available colors', function () {
+        expect(pafiumeColors().scheme(100).length).to.equal(pafiumeColors().all().length);
       });
     });
 
