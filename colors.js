@@ -13,4 +13,18 @@ var pafiumeColors = function () {
     sea:         [ '#17BEBB', '#2C8C99', '#326771', '#222831', ],
   };
 
+  return function() {
+    return {
+      all: function() {
+        const colorNames = Object.keys(colors);
+        return colorNames.map(function(color) {
+          const hues = colors[color];
+          return {
+            name: color,
+            hues,
+          };
+        });
+      }
+    }
+  };
 }
