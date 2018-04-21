@@ -56,3 +56,8 @@ var pafiumeColors = (function () {
     }
   };
 })();
+
+if((typeof process !== 'undefined') &&
+    (typeof process.versions.node !== 'undefined')) {
+    module.exports = pafiumeColors;
+}
