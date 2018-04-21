@@ -4,7 +4,7 @@
   "description": "color scheme generator",
   "main": "colors.js",
   "scripts": {
-    "test": "mocha index.spec.js"
+    "test": "mocha spec/index.spec.js"
   },
   "repository": {
     "type": "git",
