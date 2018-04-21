@@ -29,36 +29,37 @@ var pafiumeColors = (function () {
     return { name, hues };
   }
 
-  return function () {
-    return {
-      all: function () {
-        return colorNames.map(function (name) {
-          var hues = colors[name];
-          return createColorObject(name, hues);
-        });
-      },
-      random: function () {
-        var name = colorNames[randomColorIndex()];
-        return createColorObject(name, colors[name]);
-      },
-      get: function (name) {
-        if (!name) return this.random();
+  return {
+    random: function () {
+      var name = colorNames[randomColorIndex()];
+      return createColorObject(name, colors[name]);
+    },
+    get: function (name) {
+      if (!name) return this.random();
+      var hues = colors[name];
+      return createColorObject(name, hues);
+    },
+    scheme: function (number) {
+      var counter = number > colorNames.length ? 11 : number;
+      if (typeof number !== 'number') return [this.random()];
+      if (number < 1) return [this.random()];
+      if (number > colorNames.length) return this.all();
+      var scheme = [];
+      while (scheme.length < number) {
+        var color = this.random();
+        if (doesNotExistInScheme(scheme, color)) scheme.push(color);
+      }
+      return scheme;
+    },
+    all: function () {
+      return this.getAll();
+    },
+    getAll: function () {
+      return colorNames.map(function (name) {
         var hues = colors[name];
         return createColorObject(name, hues);
-      },
-      scheme: function (number) {
-        var counter = number > colorNames.length ? 11 : number;
-        if (typeof number !== 'number') return [this.random()];
-        if (number < 1) return [this.random()];
-        if (number > colorNames.length) return this.all();
-        var scheme = [];
-        while (scheme.length < number) {
-          var color = this.random();
-          if (doesNotExistInScheme(scheme, color)) scheme.push(color);
-        }
-        return scheme;
-      },
-    }
+      });
+    },
   };
 })();
 
