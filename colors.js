@@ -23,32 +23,35 @@ var pafiumeColors = (function () {
 
   };
 
+  var createColorObject = function (name, hues) {
+    return { name, hues };
+  }
+
   return function () {
     return {
       all: function () {
-        return colorNames.map(function (color) {
-          var hues = colors[color];
-          return {
-            name: color,
-            hues,
-          };
+        return colorNames.map(function (name) {
+          var hues = colors[name];
+          return createColorObject(name, hues);
         });
-      },
-      get: function (name) {
-        return {
-          name,
-          hues: colors[name],
-        };
       },
       random: function () {
         var name = colorNames[randomColorIndex()];
-        return colors[name];
+        return createColorObject(name, colors[name]);
+      },
+      get: function (name) {
+        if (!name) return this.random();
+        var hues = colors[name];
+        return createColorObject(name, hues);
       },
       scheme: function (number) {
+        if (!number || typeof number !== 'number') {
+          return [this.random()];
+        }
         var scheme = [];
         while (scheme.length < number) {
           const color = this.random();
-          if (doesNotExistInScheme(scheme, color)) {}
+          // if (doesNotExistInScheme(scheme, color)) {}
           scheme.push(color);
         }
         return scheme;
