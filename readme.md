@@ -43,11 +43,7 @@ The `pafiumeColors` Object loads into global scope from the above script.
 
 ### pafiumeColors
 
-The `pafiumeColors` Object contains multiple API to grab random colors:
-
-```js
-var color = pafiumeColors();
-```
+The `pafiumeColors` Object contains multiple API to grab random [colors](#colors):
 
 ### random()
 
