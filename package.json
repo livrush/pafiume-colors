@@ -22,6 +22,7 @@
   "homepage": "https://github.com/livrush/pafiume-colors#readme",
   "devDependencies": {
     "chai": "^4.1.2",
+    "lodash": "^4.17.5",
     "mocha": "^5.1.1"
   }
 }
