@@ -47,8 +47,10 @@ var pafiumeColors = (function () {
         return createColorObject(name, hues);
       },
       scheme: function (number) {
+        var counter = number > colorNames.length ? 11 : number;
         if (typeof number !== 'number') return [this.random()];
-        if (number > colors.length) return colors;
+        if (number < 1) return [this.random()];
+        if (number > colorNames.length) return this.all();
         var scheme = [];
         while (scheme.length < number) {
           var color = this.random();
