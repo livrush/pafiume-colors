@@ -1,4 +1,4 @@
-var pafiumeColors = function () {
+var pafiumeColors = (function () {
   var colors = {
     infinity:    [ '#C9B6BE', '#8E8C97', '#5F6062', '#24232A', ],
     cashmere:    [ '#FDD692', '#B99C6B', '#8D775F', '#4D4134', ],
@@ -27,4 +27,4 @@ var pafiumeColors = function () {
       }
     }
   };
-}
+})();
