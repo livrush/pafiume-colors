@@ -1,0 +1,21 @@
+{
+  "name": "pafiume-colors",
+  "description": "color scheme generator",
+  "main": "colors.js",
+  "authors": [
+    "livrush"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "colors",
+    "generator"
+  ],
+  "homepage": "https://github.com/livrush/pafiume-colors",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
