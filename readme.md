@@ -5,12 +5,6 @@ Random color scheme generator
 * [Install](#install)
 * [Load](#load)
 * [Usage](#usage)
-  + [pafiumeColors](#pafiumecolors)
-  + [random](#random--)
-  + [get](#get-name-)
-  + [scheme](#scheme-quantity-)
-  + [getAll](#getall--)
-  + [Color Object](#color-object)
 * [Colors](#colors)
 
 ## Install
