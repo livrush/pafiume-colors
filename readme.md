@@ -102,3 +102,10 @@ Each color Object produced by `pafiumeColors` has two properties
   ],
 }
 ```
+## Colors
+
+![alt text](./assets/colors0.png "Infinity, Soul, Cranberry")
+![alt text](./assets/colors1.png "Brick, Clementine, Cashmere")
+![alt text](./assets/colors2.png "Amber, Pea, Mint")
+![alt text](./assets/colors3.png "Sky, Sea")
+
