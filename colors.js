@@ -13,18 +13,30 @@ var pafiumeColors = (function () {
     sea:         [ '#6BD5D3', '#17BEBB', '#2C8C99', '#29555D', ],
   };
 
-  return function() {
+  var colorNames = Object.keys(colors);
+
+  var randomColorIndex = function () {
+    return Math.floor(Math.random() * colors.length);
+  }
+
+  return function () {
     return {
-      all: function() {
-        const colorNames = Object.keys(colors);
-        return colorNames.map(function(color) {
-          const hues = colors[color];
+      all: function () {
+        return colorNames.map(function (color) {
+          var hues = colors[color];
           return {
             name: color,
             hues,
           };
         });
-      }
+      },
+      get: function (name) {
+        return colors[name];
+      },
+      random: function () {
+        var name = colorNames[randomColorIndex()];
+        return colors[name];
+      },
     }
   };
 })();
