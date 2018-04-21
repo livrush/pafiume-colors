@@ -1,3 +1,53 @@
-<html>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pafiume Colors Preview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      font-family: 'Ubuntu Mono', monospace;
+    }
+    .container {
+      max-width: 500px;
+    }
+    .color {
+      background: #eee;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+    .hue {
+      align-items: flex-end;
+      box-sizing: border-box;
+      display: flex;
+      height: 100px;
+      list-style: none;
+      justify-content: flex-end;
+      padding: 10px;
+      width: 100px;
+    }
+    .hue:last-child {
+      color: #fff;
+    }
+    .name {
+      border-top: 1px solid;
+      justify-content: flex-start;
+      text-transform: uppercase;
+    }
+    .color:first-child .name {
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container"></div>
+  <script src="./colors.js"></script>
+  <script src="./preview.js"></script>
+</body>
 </html>
