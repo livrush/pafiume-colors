@@ -16,8 +16,12 @@ var pafiumeColors = (function () {
   var colorNames = Object.keys(colors);
 
   var randomColorIndex = function () {
-    return Math.floor(Math.random() * colors.length);
-  }
+    return Math.floor(Math.random() * colorNames.length);
+  };
+
+  var doesNotExistInScheme = function (scheme, color) {
+
+  };
 
   return function () {
     return {
@@ -31,11 +35,23 @@ var pafiumeColors = (function () {
         });
       },
       get: function (name) {
-        return colors[name];
+        return {
+          name,
+          hues: colors[name],
+        };
       },
       random: function () {
         var name = colorNames[randomColorIndex()];
         return colors[name];
+      },
+      scheme: function (number) {
+        var scheme = [];
+        while (scheme.length < number) {
+          const color = this.random();
+          if (doesNotExistInScheme(scheme, color)) {}
+          scheme.push(color);
+        }
+        return scheme;
       },
     }
   };
