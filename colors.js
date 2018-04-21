@@ -1,6 +1,6 @@
 var pafiumeColors = (function () {
   var colors = {
-    infinity:    [ '#C9B6BE', '#8E8C97', '#5F6062', '#24232A', ],
+    infinity:    [ '#ACABB3', '#8E8C97', '#5F6062', '#24232A', ],
     soul:        [ '#B19CAA', '#94778B', '#4E344A', '#270722', ],
     cranberry:   [ '#FFAFAF', '#C95D63', '#803C40', '#462123', ],
     brick:       [ '#FF5D48', '#FF3A20', '#BA2B18', '#66180E', ],
@@ -10,7 +10,7 @@ var pafiumeColors = (function () {
     pea:         [ '#F3FF92', '#C6CA53', '#739130', '#103900', ],
     mint:        [ '#AEECCD', '#69A197', '#136F63', '#0B3D36', ],
     sky:         [ '#B1E4E4', '#74A4BC', '#717EC3', '#4A4E69', ],
-    sea:         [ '#17BEBB', '#2C8C99', '#326771', '#222831', ],
+    sea:         [ '#6BD5D3', '#17BEBB', '#2C8C99', '#29555D', ],
   };
 
   return function() {
