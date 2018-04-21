@@ -9,8 +9,9 @@
   <style>
     body {
       display: flex;
-      justify-content: center;
       font-family: 'Ubuntu Mono', monospace;
+      justify-content: center;
+      margin: 0;
     }
     .container {
       max-width: 500px;
@@ -42,6 +43,19 @@
     }
     .color:first-child .name {
       border: none;
+    }
+    @media screen and (max-width: 499px) {
+      .container { max-width: 400px; }
+      .name { border: none; }
+    }
+    @media screen and (max-width: 399px) {
+      .container { max-width: 300px; }
+    }
+    @media screen and (max-width: 299px) {
+      .container { max-width: 200px; }
+    }
+    @media screen and (max-width: 199px) {
+      .container { max-width: 100px; }
     }
   </style>
 </head>
