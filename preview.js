@@ -1,4 +1,4 @@
-const colors = pafiumeColors().all();
+const colors = pafiumeColors.all();
 
 const container = document.getElementsByClassName('container')[0];
 
