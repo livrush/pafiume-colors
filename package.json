@@ -1,0 +1,27 @@
+{
+  "name": "pafiume-colors",
+  "version": "1.0.0",
+  "description": "color scheme generator",
+  "main": "colors.js",
+  "scripts": {
+    "test": "mocha index.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livrush/pafiume-colors.git"
+  },
+  "keywords": [
+    "colors",
+    "generator"
+  ],
+  "author": "livrush",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/livrush/pafiume-colors/issues"
+  },
+  "homepage": "https://github.com/livrush/pafiume-colors#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1"
+  }
+}
