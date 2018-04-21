@@ -105,9 +105,7 @@ describe('Pafiume Colors', function(){
 
         it('should be unique', function () {
           var colorsArray = pafiumeColors().scheme(10);
-          var uniqueArray = _.uniqBy(colorsFromSchemeAPI, 'name');
-          console.log(colorsArray.length, colorsArray)
-          console.log(uniqueArray.length, uniqueArray)
+          var uniqueArray = _.uniqBy(colorsArray, 'name');
           expect(uniqueArray.length).to.equal(colorsArray.length);
         });
       });
