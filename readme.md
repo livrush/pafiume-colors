@@ -28,13 +28,13 @@ $ bower install pafiume-colors
 From npm:
 
 ```js
-const gimei = require('pafiume-colors');
+const pafiumeColors = require('pafiume-colors');
 ```
 
 From Bower:
 
 ```html
-<script src="/bower_components/pafiume-colors/dist/gimei.min.js"></script>
+<script src="/bower_components/pafiume-colors/colors.js"></script>
 ```
 
 The `pafiumeColors` Object loads into global scope from the above script.
@@ -75,7 +75,7 @@ color.scheme(100);          // => [ {...} ... ];
 
 ### getAll()
 
-Produces an array of all colrs.
+Produces an array of all colors.
 
 ```js
 color.getAll();             // => [ {...} ... ];
