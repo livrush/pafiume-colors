@@ -20,7 +20,9 @@ var pafiumeColors = (function () {
   };
 
   var doesNotExistInScheme = function (scheme, color) {
-
+    var name = color.name;
+    var scheme = scheme.map(color => color.name);
+    return !scheme.includes(name);
   };
 
   var createColorObject = function (name, hues) {
@@ -45,14 +47,12 @@ var pafiumeColors = (function () {
         return createColorObject(name, hues);
       },
       scheme: function (number) {
-        if (!number || typeof number !== 'number') {
-          return [this.random()];
-        }
+        if (typeof number !== 'number') return [this.random()];
+        if (number > colors.length) return colors;
         var scheme = [];
         while (scheme.length < number) {
-          const color = this.random();
-          // if (doesNotExistInScheme(scheme, color)) {}
-          scheme.push(color);
+          var color = this.random();
+          if (doesNotExistInScheme(scheme, color)) scheme.push(color);
         }
         return scheme;
       },
