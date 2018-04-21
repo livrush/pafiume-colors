@@ -48,7 +48,7 @@ The `pafiumeColors` Object contains multiple API to grab random [colors](#colors
 ### random()
 
 ```js
-color.random() //
+color.random()              // => {...};
 ```
 
 ### get(name)
@@ -56,7 +56,7 @@ color.random() //
 Produces a specific color.
 
 ```js
-color.get('infinity');
+color.get('infinity');      // => {...};
 ```
 
 ### scheme(quantity)
@@ -67,18 +67,18 @@ Produces an array of unique colors. Can produce quantity anywhere from 0 - total
 * Quantity greater than available colors results in array of all colors
 
 ```js
-color.scheme(3);      // => [ {...}, {...}, {...} ];
-color.scheme();       // => [ {...} ];
-color.scheme(-3);     // => [ {...} ];
-color.scheme(100);    // => [ {...} ... ];
+color.scheme(3);            // => [ {...}, {...}, {...} ];
+color.scheme();             // => [ {...} ];
+color.scheme(-3);           // => [ {...} ];
+color.scheme(100);          // => [ {...} ... ];
 ```
 
 ### getAll()
 
-Produces an array of all colors.
+Produces an array of all colrs.
 
 ```js
-color.getAll();
+color.getAll();             // => [ {...} ... ];
 ```
 
 ### Color Object
