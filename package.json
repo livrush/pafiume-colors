@@ -1,6 +1,6 @@
 {
   "name": "pafiume-colors",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "color scheme generator",
   "main": "colors.js",
   "scripts": {
