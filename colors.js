@@ -67,3 +67,7 @@ if((typeof process !== 'undefined') &&
     (typeof process.versions.node !== 'undefined')) {
     module.exports = pafiumeColors;
 }
+
+if ( typeof module === "object" && typeof module.exports === "object" ) {
+  module.exports = pafiumeColors;
+}
