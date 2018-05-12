@@ -2,7 +2,7 @@
   "name": "pafiume-colors",
   "version": "0.1.2",
   "description": "color scheme generator",
-  "main": "colors.js",
+  "main": "lib/colors.js",
   "scripts": {
     "test": "mocha spec/index.spec.js",
     "build": "babel colors.js -d lib"

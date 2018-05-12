@@ -2,7 +2,7 @@
 const path = require('path');
 const _ = require('lodash');
 const expect = require('chai').expect;
-const pafiumeColors = require('../colors.js');
+const pafiumeColors = require('../src/colors.js');
 
 describe('Pafiume Colors', function(){
   it('is a function', function () {

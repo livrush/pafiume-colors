@@ -1,7 +1,7 @@
 {
   "name": "pafiume-colors",
   "description": "color scheme generator",
-  "main": "colors.js",
+  "main": "lib/colors.js",
   "authors": [
     "livrush"
   ],
